@@ -2,49 +2,49 @@
  * Project Untitled
  */
 
-
 #ifndef _ITEM_H
 #define _ITEM_H
 
+#include <string>
+using namespace std;
+
 class Item {
 public: 
+    // Method untuk mengecek ketersediaan item
+    void checkavailability();
     
-void checkavailability();
+    // Method untuk memperbarui status item
+    void updatestatus();
     
-void updatestatus();
+    // Getter untuk nama item
+    string getitemname();
     
-void getitemname();
+    // Setter untuk nama item
+    void setitemname(const string& value);
     
-/**
- * @param value
- */
-void setitemname(void value);
+    // Getter untuk tipe item
+    string getitemtype();
     
-void getitemtype();
+    // Setter untuk tipe item
+    void setitemtype(const string& value);
     
-/**
- * @param value
- */
-void setitemtype(void value);
+    // Getter untuk ketersediaan item
+    bool getavailability();
     
-void getavailability();
+    // Setter untuk ketersediaan item
+    void setavailability(bool value);
     
-/**
- * @param value
- */
-void setavailability(void value);
+    // Getter untuk foto item
+    string getitemphoto();
     
-void getitemphoto();
+    // Setter untuk foto item
+    void setitemphoto(const string& value);
     
-/**
- * @param value
- */
-void setitemphoto(void value);
 private: 
-    string itemname;
-    string itemtype;
-    boolean availability;
-    image itemphoto;
+    string itemname;       // Nama item
+    string itemtype;       // Tipe item
+    bool availability;     // Status ketersediaan
+    string itemphoto;      // Path atau lokasi foto item
 };
 
 #endif //_ITEM_H
