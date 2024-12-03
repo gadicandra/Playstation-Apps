@@ -1,50 +1,35 @@
-/**
- * Project Untitled
- */
+#ifndef USER_H
+#define USER_H
 
 
-#ifndef _USER_H
-#define _USER_H
+class User: public userInterface {
+    private:
+    int targetLine;
+    string checkUsername;
+    string checkPassword;
+    int pilihanRegister;
+    string username, password, rePassword;
+    bool isCorrect;
+    string nama, email; 
+    string noTelp, idNumber;
+    
+    public :
 
-class User {
-public: 
+    bool regist();
+
+    bool loginAsMember();
+
+    bool loginAsAdministrator();
     
-void savehistory();
-    
-void rentitem();
-    
-void returnitem();
-    
-void loginuser();
-    
-void signup();
-    
-void logoutuser();
-    
-void getuserid();
-    
-/**
- * @param value
- */
-void setuserid(void value);
-    
-void getusername();
-    
-/**
- * @param value
- */
-void setusername(void value);
-    
-void getusercontact();
-    
-/**
- * @param value
- */
-void setusercontact(void value);
-private: 
-    image userid;
-    string username;
-    string usercontact;
+    int profil(string us);
+
+    void updateData(string us);
+
+    void replaceLine(string us);
+
+    void Delete(string us);
+
+    string mulai();
+
 };
-
-#endif //_USER_H
+#endif // USER_H
