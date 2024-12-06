@@ -85,7 +85,7 @@ void Playstation:: pesanan(int ps, int rent, int time, string us){
     ofstream file1("history.txt", ios::app);
     ofstream file2("listPesanan.txt", ios::app);
     if(ps == 1){
-        file1 << us << endl;
+        file1 << "\n" << us << endl;
         file1 << "Playstation 5" << endl;
         file1 << "Lama        : " << time << " hari" << endl;
         file1 << "Harga       : " << rent << endl; 
@@ -96,7 +96,7 @@ void Playstation:: pesanan(int ps, int rent, int time, string us){
         file2 << "Harga       : " << rent << endl; 
         file2 << "Pengembalian: belum\n" << endl;
     } else if (ps == 2){
-        file1 << us << endl;
+        file1 << "\n" << us << endl;
         file1 << "Playstation 4" << endl;
         file1 << "Lama        : " << time << " hari" << endl;
         file1 << "Harga       : " << rent << endl; 
@@ -107,7 +107,7 @@ void Playstation:: pesanan(int ps, int rent, int time, string us){
         file2 << "Harga       : " << rent << endl; 
         file2 << "Pengembalian: belum\n" << endl;
     } else if (ps == 3){
-        file1 << us << endl;
+        file1 << "\n" << us << endl;
         file1 << "Playstation 3" << endl;
         file1 << "Lama        : " << time << " hari" << endl;
         file1 << "Harga       : " << rent << endl; 
