@@ -192,39 +192,6 @@ int User::profil(string us){
     return menuProfil();
 }
 
-void User::profilPemesan(string us){
-    int currentLine = 1;
-    ifstream myfile("account.txt");
-    string line;
-        
-    if(myfile.is_open()){
-        while(getline(myfile, line)){
-            if(us == line){
-                targetLine = currentLine;
-            } else if (currentLine == targetLine + 2){
-                nama = line;
-            } else if (currentLine == targetLine + 3){
-                email = line;
-            } else if (currentLine == targetLine + 4){
-                noTelp = line;
-            } else if (currentLine == targetLine + 5){
-                idNumber = line;
-            } else if (currentLine == targetLine + 6){
-                balance = stoi(line);
-            }
-            currentLine++;
-        }
-        myfile.close();
-    }
-
-    cout << "Nama    : " << nama  << endl;
-    cout << "Email   : " << email << endl;
-    cout << "No. Telp: " << noTelp << endl;
-    cout << "NIK     : " << idNumber << endl;
-    cout << "Balance : " << balance << endl;
-    cout << "========================================" << endl;
-}
-
 void User::updateData(string us){
     header();
     cout << "Masukkan Nama: " << endl;
@@ -236,10 +203,7 @@ void User::updateData(string us){
     cin >> noTelp;
     cout << "Masukkan NIK: " << endl;
     cin >> idNumber;
-    replaceLine(us);
-}
 
-void User::replaceLine(string us){
     fstream file("account.txt", ios::in);
     fstream tempFile("temp.txt", ios::out);
 
@@ -288,7 +252,7 @@ void User::Delete(string us){
     while(getline(file, line)){
         if(us == line){
             targetLine = currentLine;
-        } else if(currentLine == targetLine + 1 || currentLine == targetLine + 2 || currentLine == targetLine + 3 || currentLine == targetLine + 4 || currentLine == targetLine + 5) {
+        } else if(currentLine >= targetLine + 1 && currentLine <= targetLine + 6) {
         } else {
             tempFile << line << endl;
         }
