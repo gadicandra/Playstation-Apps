@@ -1,10 +1,10 @@
-#include "UI.cpp"
-#include "User.cpp"
-#include "Playstation.cpp"
-#include "Ps3.cpp"
-#include "Ps4.cpp"
-#include "Ps5.cpp"
-#include "transit.cpp"
+#include "UI.h"
+#include "User.h"
+#include "Playstation.h"
+#include "Ps3.h"
+#include "Ps4.h"
+#include "Ps5.h"
+#include "transit.h"
 using namespace std;
 
 int main(){
