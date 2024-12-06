@@ -112,7 +112,7 @@ bool User::loginAsAdministrator(){
     //Melakukan pengecekkan apakah username telah terdaftarkan
     ifstream myfile("accountAdministrator.txt");
     string line;
-    bool checking;
+    bool checking = false;
     
     if(myfile.is_open()){
         while(getline(myfile, line)){
@@ -120,7 +120,7 @@ bool User::loginAsAdministrator(){
                 checkUsername = line;
                 targetLine = currentLine;
                 checking = true;
-            } else if (currentLine = targetLine + 1){
+            } else if (currentLine == targetLine + 1){
                 checkPassword = line;
                 break;
             }
@@ -133,8 +133,6 @@ bool User::loginAsAdministrator(){
         cout << "Username tidak ditemukan" << endl;
         return false;
     }
-
-    line = "";
 
     cout << "Masukkan password(tanpa spasi): " << endl;
     cin >> password;
