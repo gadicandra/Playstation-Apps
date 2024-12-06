@@ -110,12 +110,6 @@ int userInterface::konfirmasiPemesanan(){
         case 49:
             konfirmasi = 1;
             break;
-        case 50:
-            konfirmasi = 2;
-            break;
-        case 51:
-            konfirmasi = 3;
-            break;
     }
     return konfirmasi;
 }
