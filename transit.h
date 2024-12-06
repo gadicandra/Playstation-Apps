@@ -13,7 +13,9 @@ class transit {
         int rentTime;
     
     public:
-    void transisi(); //Fungsi untuk pindah menu
+    void transisi(); 
+    //Fungsi untuk pindah menu
+    //Postcondition: Fungsi untuk menjalankan program sepenuhnya
 
 };
 
