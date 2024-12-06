@@ -49,18 +49,18 @@ bool User::loginAsMember(){ //Untuk melakukan login dan pengecekan memiliki akun
 
     cout << "Masukkan username(tanpa spasi): " << endl;
     cin >> username;
-    cout << "Masukkan password(tanpa spasi): " << endl;
-    cin >> password;
 
     //Melakukan pengecekan apakah username dan password benar
     ifstream myfile("account.txt");
     string line;
+    bool checking = false;
 
     if(myfile.is_open()){
         while(getline(myfile, line)){
             if(username == line){
                 targetLine = currentLine;
                 checkUsername = line;
+                checking = true;
             } else if (currentLine == targetLine + 1){
                 checkPassword = line;
                 break;
@@ -71,6 +71,16 @@ bool User::loginAsMember(){ //Untuk melakukan login dan pengecekan memiliki akun
     } else {
         myfile.close();
     }
+
+    if(!checking){
+        cout << "Username tidak ditemukan, silahkan sign up" << endl;
+        return false;
+    }
+
+    cout << "Masukkan password(tanpa spasi): " << endl;
+    cin >> password;
+
+    
 
     while(!isCorrect){
         if(password == checkPassword){
@@ -112,6 +122,7 @@ bool User::loginAsAdministrator(){
                 checking = true;
             } else if (currentLine = targetLine + 1){
                 checkPassword = line;
+                break;
             }
             currentLine++;
         }
