@@ -5,6 +5,8 @@
 #include "Ps4.h"
 #include "Ps5.h"
 #include "transit.h"
+#include <conio.h>
+#include <iostream>
 
 
 void transit::transisi(){
@@ -64,6 +66,19 @@ void transit::transisi(){
                             users.addBalance(usernameFix);
                             break;
                         }else if (pilihanProfil == 3){
+                            users.header();
+                            cout <<"Tekan 1 jika anda yakin untuk menghapus akun, tekan lainnya untuk kembali" << endl;
+                            int isDelete = _getch();
+                            if(isDelete == 49){
+                                users.Delete(usernameFix);
+                                pilihanKedua = 0;
+                                usernameFix = "-1";
+                                break;
+                            } else {
+                                pilihanProfil = 1;
+                                continue;
+                            }
+                            
                             users.Delete(usernameFix);
                             pilihanKedua = 0;
                             break;
@@ -193,7 +208,7 @@ void transit::transisi(){
                     users.menuKembali();
                     break;
                 case 5:
-                    usernameFix = users.mulai();
+                    usernameFix = "-1";
                     pilihanKedua = 0;
                     break;
                 
