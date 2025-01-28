@@ -1,4 +1,4 @@
-# 🎮 **PlayStation Rental Service** ![Logo](logo.png)
+# 🎮 **PlayStation Rental Service**
 
 Rent the latest PlayStation consoles and games online! Enjoy gaming without the commitment of buying. Perfect for gamers, parties, or trying before you buy.
 
