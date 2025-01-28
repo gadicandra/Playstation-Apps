@@ -1,9 +1,5 @@
 # 🎮 **PlayStation Rental Service** ![Logo](logo.png)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Build Status](https://github.com/username/playstation-rental/actions/workflows/tests.yml/badge.svg)](https://github.com/username/playstation-rental/actions)
-[![Website](https://img.shields.io/badge/Website-Live-brightgreen)](https://yourwebsite.com)
-
 Rent the latest PlayStation consoles and games online! Enjoy gaming without the commitment of buying. Perfect for gamers, parties, or trying before you buy.
 
 ---
